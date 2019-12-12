@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container produk">
+            <div class="row">
+                {% for produk in produks %}
+                <div class="col-md-4">
+                    <div class = "bagus">
+                        <img src="{{produk.foto}}" alt="">
+                        <div class="nama">{{produk.nama}}</div>
+                        <div class="harga">
+                            <p>Rp. {{produk.harga}}</p>
+                        </div>
+                        <div><a href="{% url 'detail' produk.id %}">Baca Selengkapnya</a></div>
+                    </div>
+                </div>
+                {% endfor %}
+                <div class="col-md-12">
+                    <div class="buat">
+                         <p>ingin menambahkan berita?<a href="{% url 'form' %}">Buat Berita Baru</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
+{% endblock%} 

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container form">
+        <form method="POST" action="submit">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-2"></div>
+                <div class="col-1 label">
+                    <label for="">Foto :</label><br>
+                    <label for="">nama :</label><br>
+                    <label for="">Harga :</label><br>
+                </div>
+                <div class="col-8 input">
+                    <input type="text" name="foto" placeholder="https://xxxxxxxxxxxxxxxxxxxxxxx.jpg" required><br>
+                    <input type="text" name="nama" placeholder="gerobak siomay" required><br>
+                    <input type="text" name="harga" placeholder="10.000.000" required><br>
+                    <input type="submit" value="ok"><br>
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
+{% endblock%}
