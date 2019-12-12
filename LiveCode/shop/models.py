@@ -8,3 +8,10 @@ class Produk(models.Model):
 
     def __str__(self):
         return self.nama
+
+class Info(models.Model):
+    produk_key = models.ForeignKey(Produk, on_delete=models.CASCADE)
+    deskripsi = models.TextField(default = "")
+
+    def __str__(self):
+        return self.choice_text
